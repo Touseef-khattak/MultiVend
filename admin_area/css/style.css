@@ -1,0 +1,510 @@
+-/*
+
+Template : E commerce Store in php and mysqli with bootstrap 3
+Author Name : Mohammed Tahir Ahmed
+Author Email : sad.ahmed22224@gmail.com
+Theme URL: http://www.computerfever.com
+Version : 1.0
+
+
+
+*/
+
+/* General Styles */
+
+body {
+background:#343a40;
+}
+
+.content-wrapper {
+overflow-x:hidden;
+background:white;
+}
+
+@media (min-width: 992px){
+	
+.content-wrapper {
+	
+margin-left:250px;
+	
+}
+	
+}
+
+
+
+.page-wrapper {
+	
+min-height:570px;
+	
+}
+
+
+.page-wrapper .container-fluid {
+	
+margin-bottom:50px;
+	
+}
+
+
+.page-wrapper .container-fluid .top-space {
+	
+margin-top:70px !important;
+	
+	
+}
+
+
+/* Left Side Navbar Styles */
+
+#mainNav .navbar-collapse {
+	
+overflow:auto;
+
+max-height: 277.5px;	
+
+}
+
+#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+	
+cursor:pointer;	
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav .li-second-level {
+	
+padding-left:0;
+	
+}
+
+
+#mainNav .navbar-collapse .navbar-sidenav .li-second-level > li > a {
+	
+display:block;
+
+padding: 0.5em 0;
+
+color: #868e96;
+	
+}
+
+
+#mainNav .navbar-collapse .navbar-sidenav .li-second-level > li > a:focus,
+#mainNav .navbar-collapse .navbar-sidenav .li-second-level > li > a:hover {
+	
+text-decoration:none;
+background:black;
+color: #adb5bd;	
+	
+}
+
+
+#mainNav .navbar-collapse .navbar-sidenav .li-second-level > li > a {
+
+padding-left:2em;
+padding-bottom:0.7em;	
+padding-top:0.7em;
+
+}
+
+@media (min-width: 992px) {
+	
+#mainNav .navbar-brand {
+	
+width:250px;	
+	
+}	
+
+	
+#mainNav .navbar-collapse {
+	
+overflow:visible;
+
+max-height:none;
+	
+}	
+	
+	
+#mainNav .navbar-collapse .navbar-sidenav {
+	
+position:absolute;
+top:0;
+left:0;
+overflow-x:hidden;
+overflow-y:auto;
+flex-direction:column;
+margin-top:56px;
+background:#343a40;
+height:calc(100vh - 56px);
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav > .nav-item {
+	
+width:250px;
+
+padding:0;
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+	
+padding:1em;
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav li.active a {
+	
+color:white;
+
+background-color:#495057;
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav > .nav-item .li-second-level {
+	
+padding-left:0;
+
+list-style:none;
+
+background:#343a40;
+	
+}
+
+#mainNav .navbar-collapse .navbar-sidenav > .nav-item .li-second-level > li {
+	
+width:250px;
+	
+}
+
+
+	
+	
+}
+
+
+
+/* Right Side Styles */
+
+
+.card {
+	
+margin-bottom:20px;
+	
+}
+
+
+/* cards Styles */
+
+
+@media (max-width: 990px) {
+	
+.row .card {
+
+margin-bottom:20px;
+	
+}
+	
+	
+}
+
+
+.bg-primary .row {
+	
+margin-bottom:-5px;
+	
+}
+
+
+.bg-success .row {
+	
+margin-bottom:-5px;
+	
+}
+
+
+
+.bg-warning .row {
+	
+margin-bottom:-5px;
+	
+}
+
+
+.bg-danger .row {
+	
+margin-bottom:-5px;
+	
+}
+
+.card-header {
+	
+font-size:17px;
+	
+}
+
+.huge {
+	
+font-size:30px !important;
+line-height:normal;
+color:white;
+margin:0;
+	
+}
+
+
+.fa-4x {
+	
+font-size: 4em ;
+
+color:white;
+	
+}
+
+.text-caption { 
+
+color:white;
+
+ }
+
+
+ 
+/* Admin Profile Styles */
+
+
+.thumb-info {
+	
+position:relative;
+	
+}
+
+.mb-md {
+	
+margin-bottom:15px !important;	
+	
+}
+
+.thumb-info .rounded {
+	
+border-radius:30px !important;
+	
+}
+
+hr.dotted {
+	
+border:0;
+
+height:1px;
+
+border-bottom:1px dotted #ddd;
+
+margin:11px 0 11px 0;
+	
+}
+
+.thumb-info .thumb-info-title {
+	
+background:black;
+bottom:10%;
+color:#ffffff;
+font-size:18px;
+font-weight:700;
+left:0;
+letter-spacing:-1px;
+padding:9px 11px 9px;
+position:absolute;
+text-transform:uppercase;
+z-index:1;
+}
+
+
+.thumb-info .thumb-info-inner {
+	
+display:block;
+	
+}
+
+.thumb-info .thumb-info-type {
+	
+background-color:#0088cc;
+
+border-radius:2px;
+
+display:inline-block;
+
+float:left;
+
+font-size:12px;
+
+font-weight:400;
+
+letter-spacing:0;
+
+margin:8px -2px -15px -2px;
+
+padding:2px 9px;
+
+text-transform:none;
+	
+}
+
+
+.widget-content-expanded {
+	
+font-size:15px;
+	
+}
+
+.widget-content-expanded span {
+	
+font-weight:bold;
+		
+}
+
+.widget-content-expanded i {
+	
+color:#0088cc;
+
+margin-right:5px;
+	
+}
+
+
+
+
+
+.placeholder-highlight{
+border:1px dotted #ccc;
+}
+
+.bold{
+color:#333333;
+font-weight:bold;
+}
+
+.wait-loader{
+cursor:wait;
+opacity:0.5;
+}
+
+@media (min-width:768px){
+	
+#product-variations-form .control-label {
+padding-top: 7px;
+margin-bottom:0px;
+}
+
+}
+
+#product-variations-form .variation-hr{
+    border-top: 1px solid #eee;
+	margin-top:15px;
+	margin-bottom:15px;
+	margin-left:-20px;
+	margin-right:-20px;
+}
+
+#product-variations-form .single-variation-row strong{
+display:inline;
+font-size:17px;
+}
+
+#product-variations-form .single-variation-row .variation-attributes{
+display:inline;
+width:80% !important;
+}
+
+#product-variations-form .single-variation-row .variation-attributes select{
+display:inline;
+width:200px;
+margin-left:5px;
+}
+
+#product-variations-form .single-variation-row .variation-actions{
+display:inline;
+float:right;
+margin-left:5px;
+}
+
+#product-variations-form .single-variation-row .variation-row-expand{
+background-color:#F4F4F4;
+margin:10px -20px;
+margin-bottom:-15px;
+padding:10px;
+}
+
+.cart-product-meta{
+margin-top:6px;
+color: #333333;
+font-weight:bold;
+}
+
+.order-note-well{
+  margin-bottom:5px;
+}
+
+.order-note-well .note-content{
+background:#f5f5f5;	
+border: 1px solid #e3e3e3;
+padding: 10px;
+border-radius:2px;
+position: relative;
+}
+
+.order-note-well .note-content p{
+margin: 0px;
+padding: 0px;
+}
+
+.order-note-well .note-meta {
+padding: 10px;
+color: #999;
+margin: 0px;
+}
+
+.order-note-hr {
+border-top: 1px solid #eee;
+margin-left:-20px;
+margin-right:-20px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.border-table{
+border: 1px solid #ddd;
+}
+
+.link-separator{
+font-size:17px;
+margin-top:10px;
+margin-left:10px;
+color: gray;
+}
+
+
+.link-separator.active-link {
+color: black !important;
+font-weight: bold !important;
+}
+
+
+.payment-settings .form-group .col-md-7 .form-group{
+margin-right: 0px;
+margin-left: 0px;
+}
+
+.card .card-body hr{
+border-top: 1px solid #eee;
+margin-top:15px;
+margin-bottom:15px;
+margin-left:-20px;
+margin-right:-20px;
+}
+
+.downloadable-files th,.downloadable-files td{
+    padding: .40rem;
+}
+
+.speical-border{
+ border: 1px solid #dee2e6;
+}
